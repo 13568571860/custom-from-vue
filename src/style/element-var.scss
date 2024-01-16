@@ -1,0 +1,114 @@
+$add: #0DCC9D;
+$theme: #477BFE;
+$theme015: rgba(71, 123, 254, 0.15);
+$delete: #f00;
+$color: #333;
+$minor: #666;
+$menuBg: #222653;
+$save: #FFAD0A;
+$background: #F5F6FA;
+$border: #DCE4FA;
+$level2: #F1F5FF;
+$time: #999;
+$theme2: #999;
+$table-boder: #EBEEF5;
+$hover-theme: rgba(71, 123,  254, 0.5);
+
+$--colors: (
+  "primary": (
+    "base": $theme,
+  ),
+  "success": (
+    "base": $add,
+  ),
+  "warning": (
+    "base": $save,
+  ),
+  "danger": (
+    "base": $delete,
+  ),
+  "error": (
+    "base": $delete,
+  ),
+  "info": (
+    "base": $theme,
+  ),
+);
+
+$--switch: (
+  'on-color': $theme,
+  'off-color': $delete,
+);
+
+$--font-size: (
+  "small": 26px,
+);
+
+$--border-color: (
+  '': $border,
+  'light': $border,
+  'lighter': $border,
+  'extra-light': $border,
+  'dark': $border,
+  'darker': $border,
+);
+
+$--common-component-size: (
+  (
+    'small': 26px,
+  )
+);
+
+$--form-item-margin-bottom: (
+  'large': 22px,
+  'default': 18px,
+  'small': 18px,
+);
+
+$--table-padding: (
+  'large': 12px 0,
+  'default': 8px 0,
+  'small': 3px 0,
+);
+
+$--menu: (
+  'active-color': #fff,
+  'text-color': $color,
+  'bg-color': #fff,
+  'hover-bg-color': $hover-theme,
+);
+
+$--table-font-size: (
+  'small': 14px,
+);
+
+// we can add this to custom namespace, default is 'el'
+// @forward "element-plus/theme-chalk/src/mixins/config.scss" with (
+//   $namespace: "ep"
+// );
+
+// You should use them in scss, because we calculate it by sass.
+// comment next lines to use default color
+@forward "element-plus/theme-chalk/src/common/var.scss" with (
+  // do not use same name, it will override.
+  $colors: $--colors,
+  // $switch: $--switch,
+  $switch: $--switch,
+  $font-size: $--font-size,
+  $border-color: $--border-color,
+  $common-component-size: $--common-component-size,
+  $table-padding: $--table-padding,
+  $menu: $--menu,
+  $table-font-size: $--table-font-size,
+  // $form-item-margin-bottom: $--form-item-margin-bottom,
+  // $form: $--form,
+);
+
+// @use "element-plus/theme-chalk/src/form.scss" with (
+//   $form-item-margin-bottom: $--form-item-margin-bottom,
+// );
+// if you want to import all
+// @use "element-plus/theme-chalk/src/index.scss" as *;
+// You can comment it to hide debug info.
+
+// custom dark variables

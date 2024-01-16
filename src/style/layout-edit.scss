@@ -1,0 +1,124 @@
+[class*="-edit-page"] {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  & > header {
+    width: 100%;
+    padding: 0 10px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    .left {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 10px 0;
+      & > * {
+        margin-right: 10px;
+        margin-left: 0;
+      }
+      .el-form-item {
+        margin-bottom: 0;
+      }
+      .back {
+        background: $background;
+        border-color: $background;
+        font-weight: bold;
+        padding: 0;
+        i {
+          font-weight: bold;
+        }
+        i::before {
+          font-size: 20px;
+          line-height: 26px;
+        }
+      }
+    }
+    .right {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 10px 0;
+      .el-form-item {
+        margin-bottom: 0;
+      }
+      & > * {
+        margin-left: 10px;
+        margin-right: 0;
+      }
+    }
+  }
+  .o_y {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  & > main {
+    margin-top: 10px;
+    flex: 1;
+    max-height: calc(100% - 56px);
+    overflow-x: hidden;
+    .mt {
+      margin-top: 10px;
+    }
+    .sub {
+      background: #fff;
+      padding: 10px 20px 10px;
+      .el-form-item {
+        margin-bottom: 10px;
+      }
+    }
+    h3 {
+      font-size: 14px;
+      font-family: MicrosoftYaHei-Bold, MicrosoftYaHei;
+      font-weight: bold;
+      color: $color;
+      line-height: 19px;
+      vertical-align: middle;
+      margin-bottom: 7px;
+    }
+    h3::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 14px;
+      background: $theme;
+      vertical-align: middle;
+      margin-right: 4px;
+    }
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  [class*="-edit-page"].big {
+    .el-form-item__label {
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .el-form-item__content {
+      input {
+        font-size: 22px;
+        line-height: 1.5;
+      }
+    }
+    & > main {
+      h3 {
+        font-size: 26px;
+        line-height: 40px;
+      }
+      h3::before {
+        width: 12px;
+        height: 30px;
+      }
+    }
+    .el-input,
+    .el-textarea,
+    .el-select {
+      textarea,
+      input,
+      .el-tag {
+        font-size: 22px;
+        line-height: 1.5;
+      }
+    }
+  }
+}
